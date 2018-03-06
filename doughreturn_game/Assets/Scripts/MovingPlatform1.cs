@@ -23,7 +23,7 @@ public class MovingPlatform1 : MonoBehaviour {
 	void Update () {
 
 
-		transform.position =new Vector3(Mathf.PingPong(Time.time*5,max-min)+min, transform.position.y, transform.position.z);
+		transform.position =new Vector3(Mathf.PingPong(Time.time*3,max-min)+min, transform.position.y, transform.position.z);
 
 	}
 
