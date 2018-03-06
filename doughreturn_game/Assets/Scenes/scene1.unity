@@ -903,7 +903,7 @@ Transform:
   m_LocalScale: {x: 5, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1597459202
 GameObject:
@@ -1084,7 +1084,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1845950156
 MonoBehaviour:
@@ -1108,6 +1108,7 @@ GameObject:
   - component: {fileID: 1868187475}
   - component: {fileID: 1868187474}
   - component: {fileID: 1868187473}
+  - component: {fileID: 1868187478}
   - component: {fileID: 1868187476}
   - component: {fileID: 1868187477}
   m_Layer: 0
@@ -1184,7 +1185,7 @@ Transform:
   m_GameObject: {fileID: 1868187472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
+  m_LocalScale: {x: 5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1217,20 +1218,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1868187472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9cb2317de289a740b61422ef5ca88a2, type: 3}
+  m_Script: {fileID: 11500000, guid: e332e08b844137f45865b92e46721df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 10
-  ySpeed: 5
+  ySpeed: 15
   jumpVelocity: 20
+  rotSpeed: 10
+  wallJumpBounceSpeed: 20
   playerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   touchingPlatform: 0
   touchingWall: 0
   touchingClimbable: 0
-  canDoubleJump: 0
-  canMoveInAir: 1
+  moveVel: {x: 0, y: 0}
+  horizInput: 0
+  vertInput: 0
+  jumpInput: 0
+  circCollider: {fileID: 0}
+  capsCollider: {fileID: 0}
+  eulerAngleZ: 0
+--- !u!70 &1868187478
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868187472}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.006067658, y: -0.0037925267}
+  m_Size: {x: 0.4408093, y: 0.38267267}
+  m_Direction: 1
 --- !u!1 &1995457673
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,41 +3,39 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-	public float xSpeed = 10, ySpeed = 10, jumpVelocity = 20;
+	public float xSpeed = 10, ySpeed = 15, jumpVelocity = 20;
 	public LayerMask playerMask;
 	public bool touchingPlatform, touchingWall, touchingClimbable, 
-		canDoubleJump, 
-		canMoveInAir = true;
-	Transform myTrans, tagGround;
+		canDoubleJump;
+	Transform trans;
 	Rigidbody2D rb;
-	float hInput = 0;
 	Vector3 reset;
 
 	void Start ()
 	{
 		rb = this.GetComponent<Rigidbody2D>();
-		myTrans = this.transform;
+		trans = this.transform;
 		reset = new Vector3 (-4, 2, 0);
 		rb.position = reset;
 	}
 
-	void FixedUpdate ()
+	void Update ()
 	{
-		//touchingClimbable = Physics2D.Linecast(myTrans.position, );
+		//touchingClimbable = Physics2D.Linecast(trans.position, );
 
-		#if !UNITY_ANDROID && !UNITY_IPHONE && !UNITY_BLACKBERRY && !UNITY_WINRT || UNITY_EDITOR
-		Move(Input.GetAxisRaw("Horizontal"));
-		Climb(Input.GetAxisRaw("Vertical"));
+		Horizontal(Input.GetAxisRaw("Horizontal"));
+		Vertical(Input.GetAxisRaw("Vertical"));
 		if(Input.GetButtonDown("Jump"))
 			Jump(Input.GetAxisRaw("Horizontal"));
-		#else
-		Move (hInput);
-		#endif
 	}
 
-	void Move(float horizontalInput)
+	void FixedUpdate() {
+
+	}
+
+	void Horizontal (float horizontalInput)
 	{
-		if (!canMoveInAir && !touchingPlatform && !touchingClimbable)
+		if (!touchingPlatform && !touchingClimbable)
 			return;
 
 		Vector2 moveVel = rb.velocity;
@@ -46,13 +44,15 @@ public class PlayerController : MonoBehaviour
 			moveVel.y = 0;
 		rb.velocity = moveVel;
 
-		if(horizontalInput != 0)
+		if(horizontalInput != 0 && !touchingClimbable)
 			transform.Rotate (Vector3.back * horizontalInput * 10);
 
 	}
 
-	void Climb (float verticalInput) {
-		if (touchingClimbable) {
+	void Vertical (float verticalInput) {
+		if (touchingPlatform) {
+			bool thing = true;
+		} else if (touchingClimbable) {
 			Vector2 moveVel = rb.velocity;
 			moveVel.y = verticalInput * ySpeed;
 			rb.velocity = moveVel;
@@ -84,11 +84,6 @@ public class PlayerController : MonoBehaviour
 			rb.velocity = jumpVelocity * Vector2.up;
 			canDoubleJump = false;
 		}
-	}
-
-	public void StartMoving(float horizonalInput)
-	{
-		hInput = horizonalInput;
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
