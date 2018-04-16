@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bumpo1 : MonoBehaviour {
+public class enemy_vertical : MonoBehaviour {
 
 	public float min;
 	public float max;
@@ -18,7 +18,7 @@ public class Bumpo1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		transform.position =new Vector3(transform.position.x, Mathf.PingPong(Time.time*2,max-min)+min, transform.position.z);
+		transform.position = new Vector3(transform.position.x, Mathf.PingPong(Time.time*2,max-min)+min, transform.position.z);
 
 	}
 }
