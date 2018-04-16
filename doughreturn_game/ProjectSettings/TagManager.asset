@@ -9,6 +9,11 @@ TagManager:
   - platform
   - wall
   - jello
+  - titleObject
+  - helpObject
+  - creditsObject
+  - optionObject
+  - backObject
   layers:
   - Default
   - TransparentFX

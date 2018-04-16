@@ -6,50 +6,112 @@ using UnityEngine.SceneManagement;
 
 public class titleScreenManager : MonoBehaviour
 {
-	public Button levelSelectButton;
+	public Button startButton;
+	public Button helpButton;
 	public Button optionButton;
 	public Button creditsButton;
 	public Button quitButton;
+	public Button backButton;
 
 	GameObject[] titleObjects;
+	GameObject[] helpObjects;
+	GameObject[] creditsObjects;
 	GameObject[] optionObjects;
-	GameObject[] ballObjects;
+	GameObject[] backObjects;
 
 	private void Start()
 	{
-		titleObjects = GameObject.FindGameObjectsWithTag("titleScreenItem");
-		ballObjects = GameObject.FindGameObjectsWithTag("ballSelect");
-		hideLevels();
+		titleObjects = GameObject.FindGameObjectsWithTag("titleObject");
+		helpObjects = GameObject.FindGameObjectsWithTag("helpObject");
+		creditsObjects = GameObject.FindGameObjectsWithTag("creditsObject");
+		optionObjects = GameObject.FindGameObjectsWithTag("optionObject");
+		backObjects = GameObject.FindGameObjectsWithTag ("backObject");
+		showTitle();
 	} 
 
-	public void hideLevels() {
-		foreach(GameObject h in titleObjects) {
-			h.SetActive(true);
+	public void showTitle() {
+		foreach (GameObject g in titleObjects) {
+			g.SetActive (true);
 		}
-		foreach (GameObject i in ballObjects)
-		{
-			i.SetActive(false);
+		foreach (GameObject h in helpObjects) {
+			h.SetActive (false);
+		}
+		foreach (GameObject i in creditsObjects) {
+			i.SetActive (false);
+		}
+		foreach (GameObject j in optionObjects) {
+			j.SetActive (false);
+		}
+		foreach (GameObject k in backObjects) {
+			k.SetActive (false);
 		}
 	}
 
-	public void showLevels() {
-		foreach (GameObject h in titleObjects)
-		{
-			h.SetActive(false);
+	public void showHelp() {
+		foreach (GameObject g in titleObjects) {
+			g.SetActive (false);
 		}
-		foreach (GameObject i in ballObjects)
-		{
-			i.SetActive(false);
+		foreach (GameObject h in helpObjects) {
+			h.SetActive (true);
+		}
+		foreach (GameObject i in creditsObjects) {
+			i.SetActive (false);
+		}
+		foreach (GameObject j in optionObjects) {
+			j.SetActive (false);
+		}
+		foreach (GameObject k in backObjects) {
+			k.SetActive (true);
+		}
+	}
+
+	public void showCredits() {
+		foreach (GameObject g in titleObjects) {
+			g.SetActive (false);
+		}
+		foreach (GameObject h in helpObjects) {
+			h.SetActive (false);
+		}
+		foreach (GameObject i in creditsObjects) {
+			i.SetActive (true);
+		}
+		foreach (GameObject j in optionObjects) {
+			j.SetActive (false);
+		}
+		foreach (GameObject k in backObjects) {
+			k.SetActive (true);
+		}
+	}
+
+	public void showOptions() {
+		foreach (GameObject g in titleObjects) {
+			g.SetActive (false);
+		}
+		foreach (GameObject h in helpObjects) {
+			h.SetActive (false);
+		}
+		foreach (GameObject i in creditsObjects) {
+			i.SetActive (false);
+		}
+		foreach (GameObject j in optionObjects) {
+			j.SetActive (true);
+		}
+		foreach (GameObject k in backObjects) {
+			k.SetActive (true);
 		}
 	}
 
 	private void OnEnable()
 	{
-		levelSelectButton.onClick.AddListener(levelSelectPressed);
+		startButton.onClick.AddListener(startPressed);
+		helpButton.onClick.AddListener(showHelp);
+		optionButton.onClick.AddListener(showOptions);
+		creditsButton.onClick.AddListener(showCredits);
+		backButton.onClick.AddListener(showTitle);
 		quitButton.onClick.AddListener(quitPressed);
 	}
 
-	public void levelSelectPressed()
+	public void startPressed()
 	{
 		Application.LoadLevel(1);
 	}
@@ -70,6 +132,6 @@ public class titleScreenManager : MonoBehaviour
 	*/
 
 	public void backPressed() {
-		hideLevels();
+		showTitle();
 	}
 }
