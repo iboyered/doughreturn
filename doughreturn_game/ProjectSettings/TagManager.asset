@@ -8,6 +8,7 @@ TagManager:
   - climbable
   - platform
   - wall
+  - jello
   layers:
   - Default
   - TransparentFX
