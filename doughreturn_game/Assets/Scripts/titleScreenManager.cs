@@ -8,7 +8,6 @@ public class titleScreenManager : MonoBehaviour
 {
 	public Button startButton;
 	public Button helpButton;
-	public Button optionButton;
 	public Button creditsButton;
 	public Button quitButton;
 	public Button backButton;
@@ -16,7 +15,6 @@ public class titleScreenManager : MonoBehaviour
 	GameObject[] titleObjects;
 	GameObject[] helpObjects;
 	GameObject[] creditsObjects;
-	GameObject[] optionObjects;
 	GameObject[] backObjects;
 
 	private void Start()
@@ -24,7 +22,6 @@ public class titleScreenManager : MonoBehaviour
 		titleObjects = GameObject.FindGameObjectsWithTag("titleObject");
 		helpObjects = GameObject.FindGameObjectsWithTag("helpObject");
 		creditsObjects = GameObject.FindGameObjectsWithTag("creditsObject");
-		optionObjects = GameObject.FindGameObjectsWithTag("optionObject");
 		backObjects = GameObject.FindGameObjectsWithTag ("backObject");
 		showTitle();
 	} 
@@ -38,9 +35,6 @@ public class titleScreenManager : MonoBehaviour
 		}
 		foreach (GameObject i in creditsObjects) {
 			i.SetActive (false);
-		}
-		foreach (GameObject j in optionObjects) {
-			j.SetActive (false);
 		}
 		foreach (GameObject k in backObjects) {
 			k.SetActive (false);
@@ -57,9 +51,6 @@ public class titleScreenManager : MonoBehaviour
 		foreach (GameObject i in creditsObjects) {
 			i.SetActive (false);
 		}
-		foreach (GameObject j in optionObjects) {
-			j.SetActive (false);
-		}
 		foreach (GameObject k in backObjects) {
 			k.SetActive (true);
 		}
@@ -75,27 +66,6 @@ public class titleScreenManager : MonoBehaviour
 		foreach (GameObject i in creditsObjects) {
 			i.SetActive (true);
 		}
-		foreach (GameObject j in optionObjects) {
-			j.SetActive (false);
-		}
-		foreach (GameObject k in backObjects) {
-			k.SetActive (true);
-		}
-	}
-
-	public void showOptions() {
-		foreach (GameObject g in titleObjects) {
-			g.SetActive (false);
-		}
-		foreach (GameObject h in helpObjects) {
-			h.SetActive (false);
-		}
-		foreach (GameObject i in creditsObjects) {
-			i.SetActive (false);
-		}
-		foreach (GameObject j in optionObjects) {
-			j.SetActive (true);
-		}
 		foreach (GameObject k in backObjects) {
 			k.SetActive (true);
 		}
@@ -105,7 +75,6 @@ public class titleScreenManager : MonoBehaviour
 	{
 		startButton.onClick.AddListener(startPressed);
 		helpButton.onClick.AddListener(showHelp);
-		optionButton.onClick.AddListener(showOptions);
 		creditsButton.onClick.AddListener(showCredits);
 		backButton.onClick.AddListener(showTitle);
 		quitButton.onClick.AddListener(quitPressed);
@@ -124,13 +93,7 @@ public class titleScreenManager : MonoBehaviour
 		Application.Quit();
 		#endif
 	}
-
-	/*
-	public void levelSelectPressed() {
-		showLevels();
-	}
-	*/
-
+		
 	public void backPressed() {
 		showTitle();
 	}

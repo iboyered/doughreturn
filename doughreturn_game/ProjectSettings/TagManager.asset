@@ -15,6 +15,7 @@ TagManager:
   - optionObject
   - backObject
   - checkpoint
+  - pauseItem
   layers:
   - Default
   - TransparentFX
