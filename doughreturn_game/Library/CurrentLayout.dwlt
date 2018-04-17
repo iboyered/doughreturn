@@ -108,8 +108,8 @@ MonoBehaviour:
     y: 30
     width: 1280
     height: 750
-  m_MinSize: {x: 913, y: 442}
-  m_MaxSize: {x: 22008, y: 10021}
+  m_MinSize: {x: 911, y: 442}
+  m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
   controlID: 26
 --- !u!114 &6
@@ -254,8 +254,8 @@ MonoBehaviour:
     y: 0
     width: 374
     height: 750
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -446,7 +446,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 103dffff803dffffba3effffcc3effffdaf4ffff64f7ffffd4f7ffff24f9ffff28f9ffff9efbffff00000000
+    m_ExpandedIDs: f4ebffff74ecffffb2edffffc8edffff9efbffff00000000dc300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -508,18 +508,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/iboyered/Documents/Schoolwork/437/doughreturn/doughreturn_game
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 06280000
-    m_LastClickedID: 10246
+    m_SelectedIDs: 92270000
+    m_LastClickedID: 10130
     m_ExpandedIDs: 000000007827000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -600,7 +600,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 36.002197}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 110
 --- !u!114 &16

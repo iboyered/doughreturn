@@ -44,7 +44,7 @@ public class JumpJelloScript : MonoBehaviour {
 		loc = startLoc;
 		loc.y -= 0.5f;
 		trans.position = loc;
-		yield return new WaitForSeconds (0.25f);
+		yield return new WaitForSeconds (0.5f);
 		yield return new WaitUntil(() => !touchingPlayer);
 		trans.localScale = full;
 		trans.position = startLoc;
