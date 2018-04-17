@@ -484,7 +484,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Development:\n\tPatrick Fitzgibbon\n\tIan Boyer-Edwards\nArt:\n\tZachary
-    Heller\nMusic and sounds royalty-free"
+    Heller\nMusic: bensound.com\nSound: soundbible.com"
 --- !u!222 &821936306
 CanvasRenderer:
   m_ObjectHideFlags: 0

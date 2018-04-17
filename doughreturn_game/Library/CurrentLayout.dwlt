@@ -108,10 +108,10 @@ MonoBehaviour:
     y: 30
     width: 1280
     height: 750
-  m_MinSize: {x: 911, y: 442}
-  m_MaxSize: {x: 22006, y: 10021}
+  m_MinSize: {x: 917, y: 442}
+  m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 9481
+  controlID: 13991
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 9482
+  controlID: 13992
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -366,14 +366,14 @@ MonoBehaviour:
     height: 366
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 19463.319289922714
+  lastFramingTime: 2422.880790948868
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.0198555, y: 4.4266176, z: 6.6826024}
+    m_Target: {x: 257.10336, y: 133.10846, z: 0.21073627}
     speed: 2
-    m_Value: {x: 1.0198555, y: 4.4266176, z: 6.6826024}
+    m_Value: {x: 257.10336, y: 133.10846, z: 0.21073627}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -401,9 +401,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 23.948269
+    m_Target: 68.61678
     speed: 2
-    m_Value: 23.948269
+    m_Value: 68.61678
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -444,9 +444,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9ed00000
-    m_LastClickedID: 53406
-    m_ExpandedIDs: b6a2fdffb8a2fdffaabcfdff6cf4fdff9a44feff1045feff4a46feff6046feffd0c0feffb0c1feff32c5feffa2c5feffd0c6feffecc6feff06cbfeff1ed4feff94d4feffd2d5feffe2d5feff18d8feff8cd8feffcad9feffced9feffe6b7ffff7abbffffeebbffff1cbdffff2cbdffff42f4ffff9efbffff00000000305d00004a5d0000545d00006e5d0000885d0000a45d0000be5d00009e84000026ab0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 2ea2fcff9ca2fcffd6a3fcffe8a3fcffba2affff4439fffff49dffffaab9ffff0ef7ffff9efbffff00000000d048000030510000ccb00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -508,19 +508,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/iboyered/Documents/Schoolwork/437/doughreturn/doughreturn_game
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8c270000
-    m_LastClickedID: 10124
-    m_ExpandedIDs: 000000007227000000ca9a3bffffff7f
+    m_SelectedIDs: 00280000
+    m_LastClickedID: 10240
+    m_ExpandedIDs: 000000007627000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -548,7 +548,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007227000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000007627000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -600,7 +600,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 724}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 110
 --- !u!114 &16

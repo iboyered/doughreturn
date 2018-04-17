@@ -13,7 +13,7 @@ public class scoreAndTimeManager : MonoBehaviour {
 
 	void Awake () {
 		ResetTimeAndScore ();
-		scoreText.text = "Score: " + score;
+		scoreText.text = "Pickups: " + score + "/30";
 	}
 
 	public static void ChangeScore(int amount) {
@@ -37,7 +37,7 @@ public class scoreAndTimeManager : MonoBehaviour {
 
 
 	void Update () {
-		scoreText.text = "Score: " + score;
+		scoreText.text = "Pickups: " + score + "/30";
 
 		if (!timeFrozen) {
 			time += Time.deltaTime;
