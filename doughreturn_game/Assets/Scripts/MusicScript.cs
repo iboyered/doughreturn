@@ -9,12 +9,7 @@ public class MusicScript : MonoBehaviour {
 
 	void Start () {
 		musicSource.clip = musicClip;
+		musicSource.Play ();
 	}
-	
 
-	void Update () {
-		if (Input.GetKeyDown (KeyCode.M)) {
-			musicSource.Play ();
-		}
-	}
 }
